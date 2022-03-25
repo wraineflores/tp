@@ -17,4 +17,12 @@ class MedicineListTest {
     void demoTestMethod() {
         assertTrue(true);
     }
+
+    @Test
+    void getmedicine_medicineInput_returnedmedicine() {
+        MedicineList medicineList = new MedicineList();
+        Medicine newMedicine = new Medicine("1", "Paracetamol", 50, "2022-10-12", "Headaches", 10);
+        String expectedMedicine = "1: Paracetamol, 50, 2022-10-12, Headaches, 10";
+        assertEquals(expectedMedicine, medicineList.getMedicineInfo(newMedicine));
+    }
 }

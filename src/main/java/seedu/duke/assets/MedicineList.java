@@ -6,7 +6,6 @@ import seedu.duke.exception.NotFoundException;
 import seedu.duke.helper.UI;
 
 import java.util.ArrayList;
-import java.util.NoSuchElementException;
 
 public class MedicineList {
     private ArrayList<Medicine> medicines = new ArrayList<>();
@@ -16,7 +15,7 @@ public class MedicineList {
     }
 
     public Medicine search(String medicineId) {
-        for (Medicine medicine: medicines) {
+        for (Medicine medicine : medicines) {
             if (medicine.getMedicineId().equals(medicineId)) {
                 return medicine;
             }
