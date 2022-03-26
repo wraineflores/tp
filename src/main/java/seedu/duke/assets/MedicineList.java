@@ -96,5 +96,4 @@ public class MedicineList extends List {
         return medicines;
     }
 
-
 }
