@@ -4,6 +4,7 @@ import seedu.duke.assets.Medicine;
 import seedu.duke.assets.MedicineList;
 
 public class MedicineFinder {
+
     public static Medicine findMedicineById(MedicineList medicineLists, String requiredId) {
         for (Medicine medicine : medicineLists.getList()) {
             if (medicine.getMedicineId().equals(requiredId)) {
@@ -69,4 +70,5 @@ public class MedicineFinder {
         }
         return null;
     }
+
 }

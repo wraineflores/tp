@@ -4,6 +4,7 @@ import seedu.duke.assets.Patient;
 import seedu.duke.assets.PatientList;
 
 public class PatientFinder {
+
     public static Patient findPatientByNric(PatientList patientLists, String requiredNric) {
         for (Patient patient : patientLists.getList()) {
             if (patient.getNric().equals(requiredNric)) {
@@ -74,4 +75,5 @@ public class PatientFinder {
         }
         return null;
     }
+
 }

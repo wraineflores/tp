@@ -6,6 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class MedicineListTest {
+
     @Test
     void checkSize_arrayOfMedicines_expectedNumber() {
         MedicineList medicineList = new MedicineList();
@@ -25,4 +26,5 @@ class MedicineListTest {
         String expectedMedicine = "1: Paracetamol, 50, 2022-10-12, Headaches, 10";
         assertEquals(expectedMedicine, medicineList.getMedicineInfo(newMedicine));
     }
+    
 }
