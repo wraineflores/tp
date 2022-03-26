@@ -89,7 +89,7 @@ public class Parser {
     }
 
 
-    public static Command parseAddMedicine(String parametexrs) throws HalpmiException {
+    public static Command parseAddMedicine(String parameters) throws HalpmiException {
         String[] medicineParameters = minParameterCheck(parameters, 6);
         Validator.validateMedicine(medicineParameters);
         return new AddMedicineCommand(medicineParameters);
