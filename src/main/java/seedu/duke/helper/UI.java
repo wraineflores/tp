@@ -113,7 +113,7 @@ public class UI {
     }
 
     public static void printPrompt() {
-        System.out.print("You: ");
+        System.out.println("You: ");
     }
 
     public static void printParagraph(String paragraph) {
