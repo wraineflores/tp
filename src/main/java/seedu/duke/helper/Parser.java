@@ -6,6 +6,7 @@ import seedu.duke.helper.command.AddMedicineCommand;
 import seedu.duke.helper.command.AddPatientCommand;
 import seedu.duke.helper.command.Command;
 import seedu.duke.helper.command.DeleteDoctorCommand;
+import seedu.duke.helper.command.DeleteMedicineCommand;
 import seedu.duke.helper.command.DeletePatientCommand;
 import seedu.duke.helper.command.EditMedicineCommand;
 import seedu.duke.helper.command.ViewDoctorCommand;
@@ -44,7 +45,7 @@ public class Parser {
     }
 
     public static Command parseDeletePatient(String parameters) throws HalpmiException {
-        String[] deletePatientParameters = minParameterCheck(parameters,1);
+        String[] deletePatientParameters = minParameterCheck(parameters, 1);
         Validator.validateNric(parameters);
         return new DeletePatientCommand(deletePatientParameters);
     }
@@ -53,7 +54,8 @@ public class Parser {
         if (isNull(parameters)) {
             return new ViewPatientCommand(null);
         }
-        String[] viewPatientParameters = minParameterCheck(parameters,1);
+        String[] viewPatientParameters = minParameterCheck(parameters, 1);
+        Validator.validateNric(viewPatientParameters[0]);
         return new ViewPatientCommand(viewPatientParameters);
     }
 
@@ -64,11 +66,11 @@ public class Parser {
     public static Command parseAddDoctor(String parameters) throws HalpmiException {
         String[] addDoctorParameters = minParameterCheck(parameters, 7);
         Validator.validateAddDoctor(addDoctorParameters);
-        return  new AddDoctorCommand(addDoctorParameters);
+        return new AddDoctorCommand(addDoctorParameters);
     }
 
     public static Command parseDeleteDoctor(String parameters) throws HalpmiException {
-        String[] deleteDoctorParameters = minParameterCheck(parameters,1);
+        String[] deleteDoctorParameters = minParameterCheck(parameters, 1);
         Validator.validateNric(parameters);
         return new DeleteDoctorCommand(deleteDoctorParameters);
     }
@@ -77,7 +79,8 @@ public class Parser {
         if (isNull(parameters)) {
             return new ViewDoctorCommand(null);
         }
-        String[] viewDoctorParameters = minParameterCheck(parameters,1);
+        String[] viewDoctorParameters = minParameterCheck(parameters, 1);
+        Validator.validateNric(viewDoctorParameters[0]);
         return new ViewDoctorCommand(viewDoctorParameters);
     }
 
@@ -86,22 +89,22 @@ public class Parser {
     }
 
 
-    public static Command parseAddMedicine(String parameters) throws HalpmiException {
+    public static Command parseAddMedicine(String parametexrs) throws HalpmiException {
         String[] medicineParameters = minParameterCheck(parameters, 6);
         Validator.validateMedicine(medicineParameters);
         return new AddMedicineCommand(medicineParameters);
     }
 
     public static Command parseDeleteMedicine(String parameters) throws HalpmiException {
-        String[] deleteMedicineParameters = minParameterCheck(parameters,1);
-        return new DeletePatientCommand(deleteMedicineParameters);
+        String[] deleteMedicineParameters = minParameterCheck(parameters, 1);
+        return new DeleteMedicineCommand(deleteMedicineParameters);
     }
 
     public static Command parseViewMedicine(String parameters) throws HalpmiException {
         if (isNull(parameters)) {
             return new ViewMedicineCommand(null);
         }
-        String[] viewMedicineParameters = minParameterCheck(parameters,1);
+        String[] viewMedicineParameters = minParameterCheck(parameters, 1);
         return new ViewMedicineCommand(viewMedicineParameters);
     }
 
