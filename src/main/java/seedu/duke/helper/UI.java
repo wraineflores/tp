@@ -65,7 +65,7 @@ public class UI {
 
     public void printBye() {
         printNewLineSeparator();
-        printParagraph("Goodbye! Exiting the programme.");
+        System.out.println("Goodbye! Exiting the programme.");
     }
 
     public void printAddPatientExampleMessage() {
@@ -138,3 +138,5 @@ public class UI {
     public void print(Status status) {
     }
 }
+
+
