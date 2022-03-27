@@ -37,7 +37,7 @@ public class FindPatientCommand extends Command {
                 downcastedPatientList.findByDateAdmission(parameterArray);
                 break;
             default:
-                throw new HalpmiException("Input must be an attribute of Doctor");
+                break;
             }
             return Status.FIND_PATIENT_SUCCESS;
         }

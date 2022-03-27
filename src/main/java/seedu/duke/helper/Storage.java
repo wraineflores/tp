@@ -11,7 +11,6 @@ import seedu.duke.assets.Patient;
 import seedu.duke.assets.PatientList;
 import seedu.duke.exception.DuplicateEntryException;
 
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
@@ -113,7 +112,7 @@ public class Storage {
             }
         }
         try {
-            FileWriter dataWrite = new FileWriter(PATH_MED,false);
+            FileWriter dataWrite = new FileWriter(PATH_MED, false);
             for (Medicine m : medicines.getList()) {
                 dataWrite.write(m.saveString() + "\n");
             }
@@ -135,7 +134,7 @@ public class Storage {
             }
         }
         try {
-            FileWriter dataWrite = new FileWriter(PATH_PAT,false);
+            FileWriter dataWrite = new FileWriter(PATH_PAT, false);
             for (Patient p : patients.getList()) {
                 dataWrite.write(p.saveString() + "\n");
             }
@@ -157,7 +156,7 @@ public class Storage {
             }
         }
         try {
-            FileWriter dataWrite = new FileWriter(PATH_APT,false);
+            FileWriter dataWrite = new FileWriter(PATH_APT, false);
             for (Appointment appointment : appointments.getList()) {
                 dataWrite.write(appointment.saveString() + "\n");
             }
@@ -179,7 +178,7 @@ public class Storage {
             }
         }
         try {
-            FileWriter dataWrite = new FileWriter(PATH_DOC,false);
+            FileWriter dataWrite = new FileWriter(PATH_DOC, false);
             for (Doctor d : doctors.getList()) {
                 dataWrite.write(d.saveString() + "\n");
             }
@@ -187,7 +186,6 @@ public class Storage {
         } catch (IOException e) {
             UI.printParagraph("Unable to save data...");
         }
-        assert doctorFile.length() != 0;
     }
 
     public void saveData() {
@@ -203,3 +201,4 @@ public class Storage {
         saveAppointmentData();
     }
 }
+

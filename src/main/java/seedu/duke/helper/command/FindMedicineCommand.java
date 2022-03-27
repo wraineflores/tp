@@ -34,7 +34,7 @@ public class FindMedicineCommand extends Command {
                 downcastedMedicineList.findByQuantity(parameterArray);
                 break;
             default:
-                throw new HalpmiException("Input must be an attribute of Medicine");
+                break;
             }
             return Status.FIND_MEDICINE_SUCCESS;
         }

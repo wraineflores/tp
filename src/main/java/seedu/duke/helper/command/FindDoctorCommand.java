@@ -37,7 +37,7 @@ public class FindDoctorCommand extends Command {
                 downcastedDoctorList.findBySpecialization(parameterArray);
                 break;
             default:
-                throw new HalpmiException("Input must be an attribute of Doctor");
+                break;
             }
             return Status.FIND_DOCTOR_SUCCESS;
         }
