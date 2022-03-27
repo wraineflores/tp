@@ -1,6 +1,5 @@
 package seedu.duke.helper.command;
 
-import seedu.duke.assets.AppointmentList;
 import seedu.duke.assets.List;
 import seedu.duke.assets.MedicineList;
 import seedu.duke.exception.DuplicateEntryException;

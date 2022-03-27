@@ -23,7 +23,7 @@ public class PatientList extends List {
         return null;
     }
 
-    public void find(String[] command){
+    public void find(String[] command) {
     }
 
 
@@ -70,7 +70,7 @@ public class PatientList extends List {
         }
         CommandLineTable patientTable = new CommandLineTable();
         patientTable.setShowVerticalLines(true);//if false (default) then no vertical lines are shown
-        patientTable.setHeaders("Nric", "FullName","Age", "Address", "Gender", "Dob",
+        patientTable.setHeaders("Nric", "FullName", "Age", "Address", "Gender", "Dob",
                 "DateAdmission");
         patientTable.addRow(patient.getPatientNric(), patient.getPatientName(),
                 String.valueOf(patient.getPatientAge()),
@@ -79,7 +79,6 @@ public class PatientList extends List {
                 patient.getDateOfAdmission());
         patientTable.print();
     }
-
 
 
     //view all patients
@@ -202,26 +201,6 @@ public class PatientList extends List {
                 UI.printParagraph(stringArrayList);
             }
         }
-    }
-
-    public void findById(String[] parameters) {
-        // Intentionally left blank
-    }
-
-    public void findByDosage(String[] parameters) {
-        // Intentionally left blank
-    }
-
-    public void findByExpiry(String[] parameters) {
-        // Intentionally left blank
-    }
-
-    public void findBySideEffects(String[] parameters) {
-        // Intentionally left blank
-    }
-
-    public void findByQuantity(String[] parameters) {
-        // Intentionally left blank
     }
 
 }
