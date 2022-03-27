@@ -3,7 +3,6 @@ package seedu.duke.helper.command;
 import seedu.duke.assets.List;
 import seedu.duke.assets.PatientList;
 import seedu.duke.exception.HalpmiException;
-import seedu.duke.exception.NotFoundException;
 import seedu.duke.status.Status;
 
 public class FindPatientCommand extends Command {
@@ -12,7 +11,7 @@ public class FindPatientCommand extends Command {
         super(parameterArray);
     }
 
-    public Status execute(List patientList) throws HalpmiException, NotFoundException {
+    public Status execute(List patientList) throws HalpmiException {
         if (patientList instanceof PatientList) {
             PatientList downcastedPatientList = (PatientList) patientList;
             switch (parameterArray[0]) {
@@ -42,6 +41,6 @@ public class FindPatientCommand extends Command {
             }
             return Status.FIND_PATIENT_SUCCESS;
         }
-        throw new NotFoundException("Error in code, approach developer!");
+        throw new HalpmiException("Error in code, approach developer!");
     }
 }
