@@ -51,14 +51,7 @@ public class UI {
     }
 
     public static void printHelp() {
-        printAddDoctorMessage();
-    }
-
-    public static void printAddDoctorMessage() {
-        printNewLineSeparator();
-        printParagraph("Feature: ADD DOCTOR\n"
-                + "Format: add doctor /info [nric],[name],[age],[gender],[address],[DOB],[Specialisation]\n"
-                + "Example: add doctor /info S1234567A, John Doe, 23, M, 10 Baker Street, 1999-12-31, Urinology");
+        System.out.println("Help is on the way");
     }
 
     public int getSize() {
